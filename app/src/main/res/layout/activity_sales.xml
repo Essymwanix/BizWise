@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCD2DA">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0757A7"
+        android:id="@+id/toolbarsales"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/debt"
+        android:layout_below="@id/toolbarsales"
+        android:layout_marginTop="20dp"
+        android:onClick="selectOption"
+        android:text="ADD DEBT"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/debt"
+        android:layout_marginTop="20dp"
+        android:id="@+id/clearDebt"
+        android:onClick="selectOption"
+        android:text="CLEAR DEBT"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewSales"
+        android:layout_below="@id/clearDebt"
+        android:layout_marginTop="20dp"
+        android:onClick="selectOption"
+        android:text="CASH SALE"/>
+
+</RelativeLayout>

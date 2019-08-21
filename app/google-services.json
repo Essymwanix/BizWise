@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "191919500285",
+    "firebase_url": "https://bizwise-720ad.firebaseio.com",
+    "project_id": "bizwise-720ad",
+    "storage_bucket": "bizwise-720ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191919500285:android:29dd164c8e28218a",
+        "android_client_info": {
+          "package_name": "com.example.bizwise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191919500285-4fmtgfmbns0pefcbf717l67l33hsjc50.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bizwise",
+            "certificate_hash": "a1fd6a1c3b69df33b7b6392a2880a3f86a042919"
+          }
+        },
+        {
+          "client_id": "191919500285-odojc6ai5shjhbpb4knh8q4orud98nih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvMBEIh1xVezY18qikbOYTe53eXuqG-CI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191919500285-odojc6ai5shjhbpb4knh8q4orud98nih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
