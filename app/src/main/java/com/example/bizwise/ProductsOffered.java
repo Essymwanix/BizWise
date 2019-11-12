@@ -32,7 +32,11 @@ public class ProductsOffered extends AppCompatActivity
 {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
-    private ListView listView;
+    private ProductsAdapter mAdapter;
+    public ArrayList<Products> mProducts = new ArrayList<>();
+    RecyclerView mRecyclerView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +44,22 @@ public class ProductsOffered extends AppCompatActivity
         setContentView(R.layout.activity_products_offered);
         Toolbar toolbar = findViewById(R.id.toolbarpo);
         setSupportActionBar(toolbar);
+        mRecyclerView = findViewById(R.id.recycler);
 
+       // firebaseDatabase = FirebaseUtil.firebaseDatabase;
+        //databaseReference = FirebaseUtil.databaseReference;
+        run();
+    }
+
+    public void run(){
+        FirebaseUtil.openFbReference("products");
         firebaseDatabase = FirebaseUtil.firebaseDatabase;
         databaseReference = FirebaseUtil.databaseReference;
-        listView = findViewById(R.id.list_view);
-
+        mAdapter = new ProductsAdapter(getApplicationContext(), mProducts);
+        mRecyclerView.setAdapter(mAdapter);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ProductsOffered.this, RecyclerView.VERTICAL,false);
+        mRecyclerView.setLayoutManager(layoutManager);
+        mRecyclerView.setHasFixedSize(true);
     }
 
 

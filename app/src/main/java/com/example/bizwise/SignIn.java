@@ -7,8 +7,10 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.bizwise.utils.PreferenceUtils;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Arrays;
 import java.util.List;
@@ -16,11 +18,18 @@ import java.util.List;
 public class SignIn extends AppCompatActivity
 {
     private static final int RC_SIGN_IN = 123;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        createSignInIntent();
+
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() != null){
+            Intent intent = new Intent(SignIn.this,UserActivity.class);
+            startActivity(intent);
+        }
+        else{
+            createSignInIntent();
+        }
     }
 
     public void createSignInIntent(){
@@ -42,6 +51,7 @@ public class SignIn extends AppCompatActivity
         if (requestCode == RC_SIGN_IN){
             IdpResponse response = IdpResponse.fromResultIntent(data);
             if (resultCode == RESULT_OK){
+
                 Intent intent = new Intent(SignIn.this, UserActivity.class);
                 startActivity(intent);
             } else {

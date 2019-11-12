@@ -14,6 +14,7 @@
         <activity android:name=".AddDebt" />
         <activity android:name=".ClientsDetails" />
         <activity android:name=".UserActivity" />
+        <activity android:name=".ViewClient" />
         <activity android:name=".SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
